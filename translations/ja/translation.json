@@ -1,0 +1,73 @@
+{
+  "fes": {
+    "autoplay": "再生しようとしたメディア（'{{src}}'を含む）はこのブラウザによって許可されませんでした。おそらくブラウザの自動再生ポリシーが原因です。\n\n+ 詳細はこちら: {{url}}",
+    "checkUserDefinedFns": "{{actualName}}ではなく、誤って {{name}} と書いてしまったようです。意図的でなければ修正してください。",
+    "fileLoadError": {
+      "bytes": "ファイルの読み込みに問題があったようです。 {{suggestion}}",
+      "font": "フォントの読み込みに問題があったようです。 {{suggestion}}",
+      "gif": "GIFの読み込みに問題が発生しました。GIFのエンコーディングが 87a または 89a であることを確認してください。",
+      "image": "画像の読み込みに問題があったようです。 {{suggestion}}",
+      "json": "JSONファイルの読み込みに問題があったようです。 {{suggestion}}",
+      "large": "大きなファイルがうまくフェッチされない場合は、ファイルを小さなセグメントに分割してフェッチすることをお勧めします。",
+      "strings": "テキストファイルの読み込みに問題があったようです。 {{suggestion}}",
+      "suggestion": "ファイルパス ({{filePath}}) が正しいか、ファイルをオンラインでホストしているか、ローカルサーバを実行してみてください。\n\n+ 詳細はこちら: {{url}}",
+      "table": "テーブルファイルの読み込みに問題があったようです。 {{suggestion}}",
+      "xml": "XMLファイルの読み込みに問題があったようです。 {{suggestion}}"
+    },
+    "friendlyParamError": {
+      "type_EMPTY_VAR": "{{location}} {{func}}()は{{position}}引数に{{formatType}}を期待していましたが、代わりに空の変数を受け取りました。意図的でなければ、これはしばしばスコープの問題です。\n\n+ 詳細はこちら: {{url}}",
+      "type_TOO_FEW_ARGUMENTS": "{{location}} {{func}}()は少なくとも{{minParams}}個の引数を期待していましたが、{{argCount}}個しか受け取りませんでした。",
+      "type_TOO_MANY_ARGUMENTS": "{{location}} {{func}}()は{{maxParams}}個以上の引数は期待していませんでしたが、{{argCount}}個を受け取りました。",
+      "type_WRONG_TYPE": "{{location}} {{func}}()は{{position}}引数に{{formatType}}を期待していましたが、代わりに{{argType}}を受け取りました。"
+    },
+    "globalErrors": {
+      "reference": {
+        "cannotAccess": "\n{{location}} \"{{symbol}}\"が宣言の前に使われています。変数を使用する前に必ず宣言してください。\n\n+ 詳細はこちら: {{url}}",
+        "notDefined": "\n{{location}} \"{{symbol}}\"が現在のスコープに定義されていません。コードで定義している場合は、そのスコープ、スペル、字体（JavaScriptは大文字と小文字を区別します）を確認する必要があります。\n\n+ 詳細はこちら: {{url}}"
+      },
+      "stackSubseq-en": "└[{{location}}] \n\t Called from line {{line}} in {{func}}()\n",
+      "stackSubseq": "└[{{location}}] \n\t Called from line {{line}} in {{func}}()\n",
+      "stackTop": "┌[{{location}}] \n\t Error at line {{line}} in {{func}}()\n",
+      "syntax": {
+        "badReturnOrYield": "\n構文エラー - returnが関数外にあります。returnが関数の中に入るように、ブロックの括弧が抜けていないか確認してください。\n\n+ 詳細はこちら: {{url}}",
+        "invalidToken": "\n構文エラー - JavaScriptが認識しないシンボルが見つかったか、またはその場所に予期しないシンボルが見つかりました。\n\n+ 詳細はこちら: {{url}}",
+        "missingInitializer": "\n構文エラー - 定数は宣言されているが初期化されていません。JavaScriptでは、constのイニシャライザーが必要です。変数が宣言されたのと同じステートメントで値を指定する必要があります。エラーの行番号を確認し、定数に値を代入してください。\n\n+ 詳細はこちら: {{url}}",
+        "redeclaredVariable": "\n構文エラー - \"{{symbol}}\"が再宣言されています。JavaScriptでは変数を複数回宣言することはできません。変数の再宣言がエラーになっている行番号を確認してください。\n\n+ 詳細はこちら: {{url}}",
+        "unexpectedToken": "\n構文エラー - 予期しない場所にシンボルがあります。\n通常はタイプミスによるものです。エラーの中の行番号をチェックして、抜けているものや余分なものがないか確認してください。 \n\n+ 詳細はこちら: {{url}}"
+      },
+      "type": {
+        "constAssign": "\n{{location}} const変数が再割り当てされています。JavaScriptでは、定数に値を再割り当てすることは禁じられています。変数に新しい値を再代入したい場合は、varまたはletとして宣言されていることを確認してください。\n\n+ 詳細はこちら: {{url}}",
+        "notfunc": "\n{{location}} \"{{symbol}}\"を関数として呼び出すことができませんでした。\nスペル、字体（JavaScriptは大文字と小文字を区別します）、型を確認してください。\n\n+ 詳細はこちら: {{url}}",
+        "notfuncObj": "\n{{location}} \"{{symbol}}\"を関数として呼び出すことができませんでした。\n{{obj}}の中に\"{{symbol}}\"があるかどうか、スペル、字体（JavaScriptは大文字と小文字を区別します）、型を確認してください。\n\n+ 詳細はこちら: {{url}}",
+        "readFromNull": "\n{{location}} nullのプロパティは読み取ることができません。JavaScriptでは、nullはオブジェクトに値がないことを示します。\n\n+ 詳細はこちら: {{url}}",
+        "readFromUndefined": "\n{{location}} 未定義のプロパティを読み取れませんでした。エラーの行番号を確認し、操作されている変数が未定義でないことを確認してください。\n\n+ 詳細はこちら: {{url}}"
+      }
+    },
+    "libraryError": "{{location}} p5.jsライブラリ内部で{{func}}を呼び出したときに、メッセージ \"{{error}}\" のエラーが発生しました。特に記述がなければ、{{func}}に渡された引数の問題かもしれません。",
+    "location": "[{{file}}, line {{line}}]",
+    "misspelling": "{{location}} \"{{actualName}}\"ではなく\"{{name}}\"と書いてしまったようです。p5.jsの\"{{type}}\"を使用したい場合は、\"{{actualName}}\"に修正してください。",
+    "misspelling_plural": "{{location}} 間違って\"{{name}}\"と書いてしまったようです。\n次のいずれかでしょうか: \n{{suggestions}}",
+    "misusedTopLevel": "p5.jsの {{symbolName}} {{symbolType}} を使おうとしましたか？ もしそうなら、スケッチのsetup()関数に移した方がいいかもしれません。\n\n+ 詳細はこちら: {{url}}",
+    "positions": {
+      "p_1": "第1",
+      "p_10": "第10",
+      "p_11": "第11",
+      "p_12": "第12",
+      "p_2": "第2",
+      "p_3": "第3",
+      "p_4": "第4",
+      "p_5": "第5",
+      "p_6": "第6",
+      "p_7": "第7",
+      "p_8": "第8",
+      "p_9": "第9"
+    },
+    "pre": "\n🌸 p5.js says: {{message}}",
+    "sketchReaderErrors": {
+      "reservedConst": "p5.jsの予約変数\"{{symbol}}\"を使っている場合は、変数名を他の名前に変更してください。\n\n+ 詳細はこちら: {{url}}",
+      "reservedFunc": "p5.jsの予約関数\"{{symbol}}\"を使っている場合は、関数名を他の名前に変更してください。\n\n+ 詳細はこちら: {{url}}"
+    },
+    "welcome": "ようこそ！これはあなたのフレンドリーなデバッガーです。オフにするには、p5.min.js に切り替えてください。",
+    "wrongPreload": "{{location}} p5.jsライブラリ内部で \"{{error}}\"というメッセージのエラーが発生しました。特に記載がない場合、preloadから\"{{func}}\"が呼び出されたことが原因かもしれません。load呼び出し（loadImage、loadJSON、loadFont、loadStringsなど）以外のものは、preload関数の中に入れてはいけません。"
+  }
+}
